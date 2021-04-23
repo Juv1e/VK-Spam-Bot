@@ -78,6 +78,10 @@ namespace SpamBot
                             ts = server.Ts;
                             key = server.Key;
                         }
+                        catch (Exception)
+                        {
+                            goto Biba;
+                        }
                         if (history?.Updates == null) continue;
                         foreach (var a in history.Updates)
                         {
